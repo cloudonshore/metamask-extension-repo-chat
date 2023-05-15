@@ -77,6 +77,6 @@ while True:
     chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt])
     chain = LLMChain(llm=chat, prompt=chat_prompt)
 
-    chain.run(code=code_str, query=query)
+    chain.run(code=code_str[:5500], query=query)
 
     print("\n\n")
